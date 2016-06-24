@@ -53,6 +53,7 @@ print "Found ", len(notebooks), " notebooks:"
 for notebook in notebooks:
     print "  * ", notebook.name
 
+# Print a greeting message
 print
 print "Creating a new note in the default notebook"
 print
