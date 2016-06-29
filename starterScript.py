@@ -1,36 +1,17 @@
-#
-# A simple Evernote API demo script that lists all notebooks in the user's
-# account and creates a simple test note in the default notebook.
-#
-# Before running this sample, you must fill in your Evernote developer token.
-#
-# To run (Unix):
-#   export PYTHONPATH=../../lib; python EDAMTest.py
-#
-
+# IMPORTS
 import hashlib
 import binascii
 import evernote.edam.userstore.constants as UserStoreConstants
 import evernote.edam.type.ttypes as Types
-
 from evernote.api.client import EvernoteClient
 
-# Real applications authenticate with Evernote using OAuth, but for the
-# purpose of exploring the API, you can get a developer token that allows
-# you to access your own Evernote account. To get a developer token, visit
-# https://sandbox.evernote.com/api/DeveloperToken.action
+# SET CONSTANTS
 auth_token = "S=s1:U=91e89:E=1596cacfe43:C=15214fbcf68:P=1cd:A=en-devtoken:V=2:H=7e5994500c190be210d9273e0455dd3e"
+backlogNotebookGUID = '67d020d0-e7fc-4eb4-acbf-63764f0124c8'
+workingNotebookGUID = 'c26f3574-29bb-4a45-b799-64c972e3160b'
+doneNotebookGUID = '57002a05-8b7f-4e71-adbe-7d6bb668efaf'
 
-if auth_token == "your developer token":
-    print "Please fill in your developer token"
-    print "To get a developer token, visit " \
-        "https://sandbox.evernote.com/api/DeveloperToken.action"
-    exit(1)
-
-# Initial development is performed on our sandbox server. To use the production
-# service, change sandbox=False and replace your
-# developer token above with a token from
-# https://www.evernote.com/api/DeveloperToken.action
+# GET CLIENT OBJECT
 client = EvernoteClient(token=auth_token, sandbox=True)
 
 # GET USER STORE OBJECT
@@ -39,29 +20,30 @@ user_store = client.get_user_store()
 # GET NOTE STORE OBJECT
 note_store = client.get_note_store()
 
+# PREPARE FILTER OBJECT
+generalFilter = note_store.NoteFilter()
+
+# PREPARE ARGUMENTS FOR findNotesMetadata
+i32offset = 0
+resultSpec = note_store.NotesMetadataResultSpec()
+resultSpec.includeTitle = TRUE
+
 # CHECK VERSION
-version_ok = user_store.checkVersion(
-    "Evernote EDAMTest (Python)",
-    UserStoreConstants.EDAM_VERSION_MAJOR,
-    UserStoreConstants.EDAM_VERSION_MINOR
-)
-print "Is my Evernote API version up to date? ", str(version_ok)
-print ""
+version_ok = user_store.checkVersion("Evernote EDAMTest (Python)", UserStoreConstants.EDAM_VERSION_MAJOR, UserStoreConstants.EDAM_VERSION_MINOR)
 if not version_ok:
     exit(1)
 
-backlogNotebook = note_store.getNotebook
-
-# List all of the notebooks in the user's account
-notebooks = note_store.listNotebooks()
-print "Found ", len(notebooks), " notebooks:\n"
-print "  * ", "Name  ", "GUID  ", "Default?\n", 
-for notebook in notebooks:
-    print "  * ", notebook.name, notebook.guid, notebook.defaultNotebook, "\n"
-
-#loop until terminated by the user entering 3"
+# MAIN PROGRAM LOOP
 while True:
 	print("Backlog\n")
+
+	backlogNoteBook = note_store.getNotebook(self, auth_token, backlogGUID)
+	backlogFilter = generalFilter
+	backlogFilter.notebookGuid = backlogGUID
+	backlogNotesList = note_store.findNotesMetadata(auth_token, backlogFilter, i32offset, EDAM_USER_NOTES_MAX, resultSpec)
+	for note in backlogNotesList:
+		print(note.title)
+
 	print("In Process\n")
 	print("Done\n")
 	print("\n")        
