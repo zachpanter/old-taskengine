@@ -3,6 +3,8 @@ import hashlib
 import binascii
 import evernote.edam.userstore.constants as UserStoreConstants
 import evernote.edam.type.ttypes as Types
+import evernote.edam.limits.constants as Limits
+import evernote.edam.notestore.ttypes as NoteStore
 from evernote.api.client import EvernoteClient
 
 # SET CONSTANTS
@@ -21,12 +23,12 @@ user_store = client.get_user_store()
 note_store = client.get_note_store()
 
 # PREPARE FILTER OBJECT
-generalFilter = note_store.NoteFilter()
+generalFilter = NoteStore.NoteFilter()
 
 # PREPARE ARGUMENTS FOR findNotesMetadata
 i32offset = 0
-resultSpec = note_store.NotesMetadataResultSpec()
-resultSpec.includeTitle = TRUE
+resultSpec = NoteStore.NotesMetadataResultSpec()
+resultSpec.includeTitle = 'TRUE'
 
 # CHECK VERSION
 version_ok = user_store.checkVersion("Evernote EDAMTest (Python)", UserStoreConstants.EDAM_VERSION_MAJOR, UserStoreConstants.EDAM_VERSION_MINOR)
@@ -37,11 +39,11 @@ if not version_ok:
 while True:
 	print("Backlog\n")
 
-	backlogNoteBook = note_store.getNotebook(self, auth_token, backlogGUID)
+	backlogNoteBook = note_store.getNotebook(auth_token, backlogNotebookGUID)
 	backlogFilter = generalFilter
-	backlogFilter.notebookGuid = backlogGUID
-	backlogNotesList = note_store.findNotesMetadata(auth_token, backlogFilter, i32offset, EDAM_USER_NOTES_MAX, resultSpec)
-	for note in backlogNotesList:
+	backlogFilter.notebookGuid = backlogNotebookGUID
+	backlogNotesMetadataList = note_store.findNotesMetadata(auth_token, backlogFilter, i32offset, Limits.EDAM_USER_NOTES_MAX, resultSpec) # NOT ITERABLE?!?!?!?
+	for note in backlogNotesMetadataList:
 		print(note.title)
 
 	print("In Process\n")
