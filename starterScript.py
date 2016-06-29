@@ -33,8 +33,13 @@ if auth_token == "your developer token":
 # https://www.evernote.com/api/DeveloperToken.action
 client = EvernoteClient(token=auth_token, sandbox=True)
 
+# GET USER STORE OBJECT
 user_store = client.get_user_store()
 
+# GET NOTE STORE OBJECT
+note_store = client.get_note_store()
+
+# CHECK VERSION
 version_ok = user_store.checkVersion(
     "Evernote EDAMTest (Python)",
     UserStoreConstants.EDAM_VERSION_MAJOR,
@@ -45,18 +50,36 @@ print ""
 if not version_ok:
     exit(1)
 
-note_store = client.get_note_store()
+backlogNotebook = note_store.getNotebook
 
 # List all of the notebooks in the user's account
 notebooks = note_store.listNotebooks()
-print "Found ", len(notebooks), " notebooks:"
+print "Found ", len(notebooks), " notebooks:\n"
+print "  * ", "Name  ", "GUID  ", "Default?\n", 
 for notebook in notebooks:
-    print "  * ", notebook.name
+    print "  * ", notebook.name, notebook.guid, notebook.defaultNotebook, "\n"
 
-# Print a greeting message
-print
-print "Creating a new note in the default notebook"
-print
+#loop until terminated by the user entering 3"
+while True:
+	print("Backlog\n")
+	print("In Process\n")
+	print("Done\n")
+	print("\n")        
+	
+	try:
+		x = int(raw_input("Press 3 to exit."))
+	except:
+		print("Invalid entry")
+		continue
+	
+	if (int(x) == 3):
+		exit(0)
+	else:
+		continue
+
+
+
+
 
 # To create a new note, simply create a new Note object and fill in
 # attributes such as the note's title.
