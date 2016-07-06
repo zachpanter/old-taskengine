@@ -1,10 +1,12 @@
 # TaskEngine
 
 **Mantra**
+
 Tasks are opportunities to turn possibility into competence.
 
 **Analogy**
-We are like steam-locomotives. We have places to go, timetables to meet, and things to see along the way.
+
+Steam-locomotives illustrate our busy lives: We have places to go, timetables to meet, and things to see along the way.
 
 To do this, we need fuel. We need maintenance. We need to coordinate our travels.
 
@@ -20,10 +22,8 @@ TaskEngine uses Kanban and Agile methods to help track both projects and day-to-
 
 It encourages habit-building through recurring tasks (reminders). These tasks can be set to respawn with the functionality expected from modern calendaring services (weekday, M/W/F, T/Th, weekend, day-of-month, every-X-days/weeks/..., etc.)
 
+T.E. helps users be prompt by tracking time-based tasks (events), location-based tasks (errands), time/location-based tasks (appointments) and time/location/group-based tasks (meetings).
+
 It promotes deep understanding of backlogs through a tree-based task hierarchy that allows a parent task to be composed a number of child-tasks.
 
-Scrum-points are used to estimate task and project completion schedules. 'Burndown' and 'Velocity' visualization gives users the ability to track progress and reevaluate current approaches.
- 
-
-
-
+Scrum-points are used to estimate task and project completion effort. 'Burndown' and 'Velocity' visualization gives users the ability to track progress and reevaluate current approaches.
