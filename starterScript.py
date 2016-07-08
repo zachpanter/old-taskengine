@@ -45,6 +45,8 @@ while True:
 	backlogNotesMetadataList = note_store.findNotesMetadata(auth_token, backlogFilter, i32offset, Limits.EDAM_USER_NOTES_MAX, resultSpec) # NOT ITERABLE?!?!?!?
 	for note in backlogNotesMetadataList:
 		print(note.title)
+		for tag in note.tagNames:
+			print(tag)
 
 	print("In Process\n")
 	print("Done\n")
