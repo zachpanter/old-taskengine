@@ -1,8 +1,12 @@
 # TaskEngine
 
-**Mantra**
+**Purpose**
 
-Tasks are opportunities to turn possibility into competence.
+A scriptable personal productivity tool.
+
+**Goal**
+
+To be the most customizable personal productivity tool available.
 
 **Analogy**
 
