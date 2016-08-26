@@ -1,0 +1,119 @@
+body
+{
+  background-color: #eee;
+}
+
+.inline-block
+{
+  display: inline-block;
+}
+
+.btn-list
+{
+  margin-right: 10px;
+}
+
+
+.gly-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.over
+{
+  background: #000 !important;
+}
+
+.btn-add
+{
+  margin-top: 5px;
+}
+
+.panel-footer a
+{
+  color: #333;
+}
+
+
+.panel-footer a:hover, .panel-footer a:focus
+{
+  color: #222;
+}
+
+.margin-top-5
+{
+  margin-top: 5px;
+}
+
+
+.kanban-label a
+{
+  color: #ddd;
+}
+
+.kanban-label a:hover, .kanban-label a:focus
+{
+  color: #999;
+}
+
+.noteContent
+{
+  background-color: #f0f0f0;
+  border-color: #adadad;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+
+.manage-boards-group
+{
+  margin-right: 50px;
+}
+
+.btn-edit-board
+{
+  margin-left: -5px;
+}
+
+.voteChoice
+{
+  margin-right: 5px;
+}

@@ -1,0 +1,512 @@
+.navbar-inverse .navbar-brand {
+color: #fff;
+background-color: #8BC24A;
+}
+
+.navbar {
+min-height: 50px;
+margin-bottom: 20px;
+border: 0px solid transparent;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+color: #20c05c;
+}
+
+.btn-success {
+color: #fff;
+background-color: #20c05c;
+border-color: #20c05c;
+}
+
+.btn-success:hover, .btn-success:focus  {
+color: #fff;
+background-color: #1A9A4A;
+border-color: #1A9A4A;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #1A9A4A;
+  border-color: #1A9A4A;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.img-rounded {
+    border-radius: 0px;
+}
+
+.img-thumbnail {
+    background-color: #fff;
+    border: 1px solid #ededf0;
+    border-radius: 0px;
+    display: inline-block;
+    height: auto;
+    line-height: 1.428571429;
+    max-width: 100%;
+    moz-transition: all .2s ease-in-out;
+    o-transition: all .2s ease-in-out;
+    padding: 2px;
+    transition: all .2s ease-in-out;
+    webkit-transition: all .2s ease-in-out;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.kanban-centered {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+    .kanban-centered:before, .kanban-centered:after {
+        content: " ";
+        display: table;
+    }
+
+    .kanban-centered:after {
+        clear: both;
+    }
+
+    .kanban-centered:before, .kanban-centered:after {
+        content: " ";
+        display: table;
+    }
+
+    .kanban-centered:after {
+        clear: both;
+    }
+
+    .kanban-centered:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2px;
+        /*background: #f5f5f6;*/
+        top: 20px;
+        bottom: 20px;
+        /*margin-left: 18px;*/
+    }
+
+    .kanban-centered .kanban-entry {
+        position: relative;
+        /*width: 50%;
+        float: right;*/
+        margin: 10px 8px;
+        clear: both;
+        border-radius: 0px;
+        -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.8);
+        -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.8);
+        box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.8);
+    }
+
+        .kanban-centered .kanban-entry:before, .kanban-centered .kanban-entry:after {
+            content: " ";
+            display: table;
+        }
+
+        .kanban-centered .kanban-entry:after {
+            clear: both;
+        }
+
+        .kanban-centered .kanban-entry:before, .kanban-centered .kanban-entry:after {
+            content: " ";
+            display: table;
+        }
+
+        .kanban-centered .kanban-entry:after {
+            clear: both;
+        }
+
+        .kanban-centered .kanban-entry.begin {
+            margin-bottom: 0;
+        }
+
+        .kanban-centered .kanban-entry.left-aligned {
+            float: left;
+        }
+
+            .kanban-centered .kanban-entry.left-aligned .kanban-entry-inner {
+                margin-left: 0;
+                margin-right: -18px;
+            }
+
+                .kanban-centered .kanban-entry.left-aligned .kanban-entry-inner .kanban-time {
+                    left: auto;
+                    right: -100px;
+                    text-align: left;
+                }
+
+                .kanban-centered .kanban-entry.left-aligned .kanban-entry-inner .kanban-icon {
+                    float: right;
+                }
+
+                .kanban-centered .kanban-entry.left-aligned .kanban-entry-inner .kanban-label {
+                    margin-left: 0;
+                    margin-right: 70px;
+                }
+
+                    .kanban-centered .kanban-entry.left-aligned .kanban-entry-inner .kanban-label:after {
+                        left: auto;
+                        right: 0;
+                        margin-left: 0;
+                        margin-right: -9px;
+                        -moz-transform: rotate(180deg);
+                        -o-transform: rotate(180deg);
+                        -webkit-transform: rotate(180deg);
+                        -ms-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+
+        .kanban-centered .kanban-entry .kanban-entry-inner {
+            position: relative;
+            /*margin-left: -24px;*/
+        }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner:before, .kanban-centered .kanban-entry .kanban-entry-inner:after {
+                content: " ";
+                display: table;
+            }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner:after {
+                clear: both;
+            }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner:before, .kanban-centered .kanban-entry .kanban-entry-inner:after {
+                content: " ";
+                display: table;
+            }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner:after {
+                clear: both;
+            }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner .kanban-time {
+                position: absolute;
+                left: -100px;
+                text-align: right;
+                padding: 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-time > span {
+                    display: block;
+                }
+
+                    .kanban-centered .kanban-entry .kanban-entry-inner .kanban-time > span:first-child {
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+
+                    .kanban-centered .kanban-entry .kanban-entry-inner .kanban-time > span:last-child {
+                        font-size: 12px;
+                    }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon {
+                background: #fff;
+                color: #737881;
+                display: block;
+                width: 25px;
+                height: 25px;
+                -webkit-background-clip: padding-box;
+                -moz-background-clip: padding;
+                background-clip: padding-box;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                text-align: center;
+                -moz-box-shadow: 0 0 0 4px #f5f5f6;
+                -webkit-box-shadow: 0 0 0 4px #f5f5f6;
+                box-shadow: 0 0 0 4px #f5f5f6;
+                float: left;
+                margin-top: 6px;
+            }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-primary {
+                    background-color: #303641;
+                    color: #fff;
+                }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-secondary {
+                    background-color: #ee4749;
+                    color: #fff;
+                }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-success {
+                    background-color: #00a651;
+                    color: #fff;
+                }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-info {
+                    background-color: #21a9e1;
+                    color: #fff;
+                }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-warning {
+                    background-color: #fad839;
+                    color: #fff;
+                }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-icon.bg-danger {
+                    background-color: #cc2424;
+                    color: #fff;
+                }
+
+            .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label {
+                position: relative;
+                background: #fff;
+                padding: 0.75em;
+                /*margin-left: 50px;*/
+                -webkit-background-clip: padding-box;
+                -moz-background-clip: padding;
+                background-clip: padding-box;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+				overflow : hidden;
+				text-overflow : ellipsis;
+            }
+
+                /*.kanban-centered .kanban-entry .kanban-entry-inner .kanban-label:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 9px 9px 9px 0;
+                    border-color: transparent #f5f5f6 transparent transparent;
+                    left: 0;
+                    top: 10px;
+                    margin-left: -9px;
+                }*/
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label h2, .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label p {
+                    color: #313131;
+                    margin: 0;
+                    line-height: 1.428571429;
+
+                }
+
+                    .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label p + p {
+                        margin-top: 15px;
+                    }
+
+                .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label h2 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+					font-family: 'Ek Mukta', sans-serif;
+                }
+
+                    .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label h2 a {
+                        color: #303641;
+                    }
+
+                    .kanban-centered .kanban-entry .kanban-entry-inner .kanban-label h2 span {
+                        -webkit-opacity: .6;
+                        -moz-opacity: .6;
+                        opacity: .6;
+                        -ms-filter: alpha(opacity=60);
+                        filter: alpha(opacity=60);
+                    }
+
+
+.modal-static {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    margin-top: -100px;
+    margin-left: -100px;
+    overflow: visible !important;
+}
+
+    .modal-static,
+    .modal-static .modal-dialog,
+    .modal-static .modal-content {
+        width: 200px;
+        height: 150px;
+    }
+
+        .modal-static .modal-dialog,
+        .modal-static .modal-content {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+.kanban-col {
+    width: 250px;
+    margin-right: 20px;
+    float: left;
+}
+
+.panel-body {
+    padding: 15px 0 0 0;
+    overflow-y: auto;
+    background: #333;
+}
+
+
+
+.title-font {
+   	font-family: 'Bree Serif', serif;
+	font-size: 20px;
+}
+
+.grab {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.grabbing {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.panel-heading {
+    cursor: context-menu;
+}
+
+    .panel-heading i {
+        cursor: pointer;
+    }
+
+
+
+
+body {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.panel-primary {
+ border-color: #E8E8E8;
+ background-color: #E8E8E8;
+}
+
+.panel-primary>.panel-heading {
+color: #fff;
+background-color: #20c05c;
+border-color: #20c05c;
+}
+
+
+.panel-footer {
+  background-color: #888;
+  border-color: #888;
+}
+
+.panel-add, .panel-edit {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  padding: 10px 15px;
+}
+
+
+#sortableKanbanBoards
+{
+	width: 10000px;
+}
+
+#scrollh
+{
+	overflow-x: scroll;
+}
+
+.navbar-brand {
+padding: 8px 15px;
+}
+
+#mainBloc
+{
+  margin-top: 60px;
+}
+
+.navbar-form
+{
+padding: 0px 0px;
+border-top: 0px solid transparent;
+border-bottom: 0px solid transparent;
+margin-right: 5px;
+}
+
+
+/* Google play button */
+
+.btn-primary {
+background-color: #fff;
+border-color: #BFBFBF;
+color: #333;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+background-color: #EEEEEE;
+border-color: #BFBFBF;
+color: #333;
+}
+
+.icone-btn {
+margin-right: 5px;
+}
+
+.btn-edit
+{
+  border-color: #20c05c;
+  margin: 0px;
+  padding: 3px;
+}
+
+.btn-nav
+{
+  height: 35px;
+}
+
+.fa-flask
+{
+  font-size: 16px;
+}
+
+.fa-spin
+{
+  color: #20C05C;
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  .container-fluid
+  {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+}
+
+.no-padding
+{
+  padding-left: 0px !important;
+}
+
+.double-padding
+{
+  padding-left: 45px !important;
+  padding-right: 45px !important;
+}
