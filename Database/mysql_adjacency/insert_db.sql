@@ -1,10 +1,16 @@
+CREATE SCHEMA `taskengine` ;
+
 
 /* PHASES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-CREATE TABLE PHASE(
-    phase_id			TINYINT UNSIGNED		PRIMARY KEY	NOT NULL,
-    phase_title		    VARCHAR(20) 		    NOT NULL,
-    default_bool    	BOOLEAN     	        NOT NULL
-);
+CREATE TABLE `taskengine`.`phase` (
+  `phase_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `phase_name` VARCHAR(45) NOT NULL,
+  `phase_IsDefaultBool` BIT(1) NULL,
+  PRIMARY KEY (`phase_id`),
+  UNIQUE INDEX `idphase_UNIQUE` (`phase_id` ASC),
+  UNIQUE INDEX `phase_name_UNIQUE` (`phase_name` ASC))
+ENGINE = InnoDB;
+
 #INSERT INTO PHASES VALUES (phase_id, phase_title, default_bool)
 INSERT INTO PHASE VALUES (null, 'INBOX', TRUE);
 INSERT INTO PHASE VALUES (null, 'TRIAGE', FALSE);
